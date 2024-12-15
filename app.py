@@ -6,7 +6,12 @@ import matplotlib.pyplot as plt
 # Load the trained logistic regression model
 import os
 model_path = os.path.join("/Users/freddysiqueiros/Documents/LinkedInApp/", "logistic_regression_model.pkl")
+import os
+
+# Explicitly set the absolute path for the model
+model_path = os.path.join(os.path.dirname(__file__), "logistic_regression_model.pkl")
 model = joblib.load(model_path)
+
 
 
 # Custom labels for inputs
